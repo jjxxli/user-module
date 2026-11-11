@@ -20,6 +20,9 @@ updates:
       - dependency-name: "*"
         update-types:
           - version-update:semver-major
+      # Maven Wrapper 的升级会让 Dependabot 整体改写 mvnw / mvnw.cmd，
+      # 制造无意义的大 diff；需要时手动执行 mvn wrapper:wrapper 升级即可。
+      - dependency-name: "org.apache.maven:apache-maven"
     groups:
       # 次版本 + 补丁合并成一个 PR，减少审查负担
       maven-dependencies:
