@@ -112,7 +112,7 @@ user-module/
 
 Maven 已随项目提供 Wrapper（`mvnw` / `mvnw.cmd`），**不需要单独安装 Maven**。
 
-### 2. 克隆仓库并安装钩子
+### 2. 克隆仓库（Git 钩子是可选项）
 
 ```bash
 git clone https://github.com/jjxxli/user-module.git
@@ -121,7 +121,7 @@ cd user-module
 
 用 IDEA 导入：`File → Open`，选择仓库根目录即可；IDEA 会自动识别为 Maven 项目并依据 `pom.xml` 下载依赖（也已配置 Maven Wrapper，不需要手动指定 Maven 安装路径）。
 
-安装本地 Git 钩子（每台机器只需一次）：
+**当前仓库是「简单模式」，可以不装钩子**（直接改代码、提交、push 到 `main` 即可）。想启用严格模式（必须走分支 + PR）时再装，每台机器只需一次：
 
 ```powershell
 # Windows PowerShell
@@ -141,7 +141,7 @@ git config core.hooksPath .githooks
 
 验证：`git config --get core.hooksPath` 输出 `.githooks`。
 
-钩子会在本地拦住：在 `main` 上直接提交、大于 5 MB 的文件、敏感文件（`*.env`、`*.key`、`*.pem`、`application-local.yml` 等）、不符合规范的提交信息，以及直接 `push` 到 `main`。
+装了钩子之后，本地会拦住：在 `main` 上直接提交、大于 5 MB 的文件、敏感文件（`*.env`、`*.key`、`*.pem`、`application-local.yml` 等）、不符合规范的提交信息，以及直接 `push` 到 `main`。不装也完全不影响提交和推送。
 
 ### 3. 配置本地数据库（每台机器自己做一次）
 
@@ -230,11 +230,28 @@ curl -X POST http://localhost:8080/api/auth/login \
 
 ## 协作速查
 
-### 分支
+> ⚠️ **当前协作模式：简单模式** —— 大家各自 `git pull --rebase` → 改代码 → `git commit` → `git push` 到 `main` 即可。
+> `main` 允许直接推送（仍然禁止 `git push --force` 和删除 `main`）；CI 会自动跑但不拦截合并。
+> 想切到**严格模式**（必须 PR + 1 人评审 + CI 通过才能合并）：装钩子 `git config core.hooksPath .githooks`，再到 GitHub `Settings → Branches` 恢复「Require a pull request before merging」和「Require status checks: build」。
 
-- `main` 受保护，**禁止直接提交 / 直接 push**。
-- 一律从最新 `main` 切短期分支，前缀限定：`feature/`、`fix/`、`docs/`、`refactor/`、`chore/`、`hotfix/`。
+### 日常三步
+
+```bash
+git pull --rebase                # ① 先同步别人的改动
+# ② 改代码 / 加文件（Git 只跟踪文件，空文件夹不会被提交！）
+git add -A && git commit -m "feat(user): 新增 xxx 接口"
+git push                         # ③ 推到 main
+```
+
+- 两个人同时改**同一个文件**时，push 可能被拒（non-fast-forward）：再 `git pull --rebase` 解决冲突后 `git push`。
+- 建议每次改动前先 pull，减少冲突。
+- 新增文件夹里**至少放一个文件**（例如 `README.md`、`.gitkeep`），否则 Git 不会记录这个文件夹。
+
+### 分支（可选，推荐逐步养成）
+
+- 需要多人并行开发同一个模块时，从最新 `main` 切短期分支：`feature/`、`fix/`、`docs/`、`refactor/`、`chore/`、`hotfix/`。
 - 命名用小写英文 kebab-case，例如 `feature/login-jwt`、`docs/update-readme`、`fix/register-dup`。
+- 切分支后 push 自己的分支，再在 GitHub 开 PR，见下文「开 PR 三步」。
 
 ### 提交
 
@@ -254,7 +271,7 @@ fix(common): 修复全局异常返回码不一致
 docs: 补充新成员接入指南
 ```
 
-### 开 PR 三步
+### 开 PR 三步（可选，严格模式必用）
 
 1. 从最新 `main` 切分支开发，小步提交，本地 `./mvnw -B -ntp verify` 通过后 push 自己的分支。
 2. 在 GitHub 发起 PR，**按 `.github/PULL_REQUEST_TEMPLATE.md` 完整填写**（变更内容 / 关联 Issue / 变更类型 / 自测方式 / 影响范围 / 提交前检查清单）。
