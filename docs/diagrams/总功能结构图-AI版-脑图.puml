@@ -1,0 +1,61 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor #EAF2FB
+    LineColor #2F6FB8
+    FontColor #1F3B73
+    FontSize 13
+  }
+  :depth(1) { BackgroundColor #D6E6FA; FontSize 14 }
+}
+</style>
+title 统考 408 刷题软件 · 模块脑图（紫 = 新增 AI 助教）
+
+* 408 刷题软件
+**[#A8D5A2] M1 用户与登录（P0）
+***[#DFF3DC] 注册
+***[#DFF3DC] 登录 / 退出
+***[#DFF3DC] 当前用户
+***[#DFF3DC] 角色权限
+**[#A8D5A2] M2 题库查询（P0）
+***[#DFF3DC] 科目列表
+***[#DFF3DC] 题目分页
+***[#DFF3DC] 多条件筛选
+***[#DFF3DC] 题目详情
+**[#F7C873] M3 做题与判卷（P1）
+***[#FDEBD0] 顺序练习
+***[#FDEBD0] 随机抽题
+***[#FDEBD0] 真题模式
+***[#FDEBD0] 提交判分
+***[#FDEBD0] 答案解析
+**[#F7C873] M4 错题本（P1）
+***[#FDEBD0] 自动收录
+***[#FDEBD0] 错题重做
+***[#FDEBD0] 掌握标记
+**[#C9C9C9] M5 学习统计（P2）
+***[#EDEDED] 刷题量
+***[#EDEDED] 正确率
+***[#EDEDED] 知识掌握度
+***[#EDEDED] 趋势图
+**[#F7C873] M6 管理后台（P1）
+***[#FDEBD0] 题目增删改查
+***[#FDEBD0] 批量导入
+***[#FDEBD0] 用户管理
+***[#FDEBD0] 数据导出
+**[#A8D5A2] M7 系统支撑（P0）
+***[#DFF3DC] 统一返回
+***[#DFF3DC] 全局异常
+***[#DFF3DC] 登录拦截
+***[#DFF3DC] 参数校验
+***[#DFF3DC] 密钥加密
+***[#DFF3DC] 限流 / 超时
+***[#DFF3DC] SSE 流式
+**[#C9A6F0] M8 AI 助教（P1 加分）
+***[#E8DBFA] 自带 Key 管理
+***[#E8DBFA] AI 深度解析
+***[#E8DBFA] AI 变式题
+***[#E8DBFA] AI 学情诊断
+***[#E8DBFA] 多轮追问
+***[#E8DBFA] 调用记录 / 配额
+@endmindmap

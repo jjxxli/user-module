@@ -1,0 +1,25 @@
+# Dependabot：每周检查 Maven 依赖与 GitHub Actions 的更新并自动提 PR
+# 文档：https://docs.github.com/code-security/dependabot/dependabot-version-updates
+version: 2
+updates:
+  # Maven 依赖（pom.xml 在仓库根目录）
+  - package-ecosystem: maven
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    commit-message:
+      prefix: "build(deps)"
+
+  # GitHub Actions 版本（.github/workflows 里的 action）
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    commit-message:
+      prefix: "ci(deps)"

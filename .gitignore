@@ -1,0 +1,55 @@
+### 构建产物 ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Eclipse / STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### 本地环境配置（含数据库密码等敏感信息，禁止提交到仓库） ###
+src/main/resources/application-local.yml
+**/application-local.yml
+.env
+.env.*
+!.env.example
+
+### 日志与临时文件 ###
+logs/
+*.log
+*.tmp
+*.hprof
+*.bak
+*.orig
+
+### 操作系统 ###
+.DS_Store
+Thumbs.db
+
+### Spring Initializr 生成的导航文件 ###
+HELP.md

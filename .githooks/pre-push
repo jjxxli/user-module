@@ -1,0 +1,31 @@
+#!/bin/sh
+# ============================================================
+# pre-push：推送前检查
+# 规则：main 是受保护分支，禁止直接 push，必须通过功能分支 + Pull Request 合入
+# ============================================================
+set -u
+
+protected_ref="refs/heads/main"
+blocked=0
+
+# stdin 每行格式：<local_ref> <local_sha> <remote_ref> <remote_sha>
+while read -r local_ref local_sha remote_ref remote_sha; do
+    [ -n "${remote_ref:-}" ] || continue
+
+    if [ "$remote_ref" = "$protected_ref" ]; then
+        blocked=1
+        break
+    fi
+done
+
+if [ "$blocked" -eq 1 ]; then
+    echo "❌ main 受保护，禁止直接 push 到 main。"
+    echo "   请 push 到自己的分支并发起 Pull Request，例如："
+    echo ""
+    echo "     git push -u origin feature/your-feature"
+    echo ""
+    echo "   然后在 GitHub 上创建 PR，等待 CI（build 检查）通过、评审通过后再合并。"
+    exit 1
+fi
+
+exit 0

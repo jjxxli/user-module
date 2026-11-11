@@ -1,0 +1,19 @@
+# ============================================================
+#  CODEOWNERS —— 代码所有者
+#  作用：自动把 PR 指派给对应负责人审查（分支保护里会勾选 "Require review from Code Owners"）。
+#  写法：路径模式 + 负责人（@用户名，必须已是仓库协作者）。
+#  组员加入后，把 @用户名 追加到对应行即可，例如：
+#    /src/main/java/com/example/user/controller/  @jjxxli @xiaoming
+# ============================================================
+
+# 默认：整个仓库由 Owner 兜底
+*                                   @jjxxli
+
+# 按模块（组员确定后取消注释并改成对应负责人）
+# /src/main/java/com/example/user/controller/   @jjxxli
+# /src/main/java/com/example/user/service/      @jjxxli
+# /src/main/java/com/example/user/mapper/       @jjxxli
+# /src/main/java/com/example/user/common/       @jjxxli
+# /src/main/resources/                          @jjxxli
+# /docs/                                        @jjxxli
+# /.github/                                     @jjxxli

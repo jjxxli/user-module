@@ -1,0 +1,65 @@
+@startuml
+skinparam defaultFontName "Microsoft YaHei"
+skinparam shadowing false
+skinparam ArrowColor #6A4FBF
+skinparam ArrowFontColor #4B3B80
+skinparam ArrowFontSize 11
+skinparam nodesep 24
+skinparam ranksep 30
+skinparam rectangle {
+  BackgroundColor #F7F4FF
+  BorderColor #8A6FD1
+  FontColor #3B2F66
+  FontSize 12
+}
+skinparam database {
+  BackgroundColor #FFF7E6
+  BorderColor #C98A1B
+  FontColor #7A5210
+  FontSize 12
+}
+skinparam cloud {
+  BackgroundColor #EAF7FF
+  BorderColor #2F8FBF
+  FontColor #1F5F80
+  FontSize 12
+}
+
+title 408 刷题软件 · AI 助教模块（BYOK 自带密钥）技术方案
+
+actor "学生" as U
+
+rectangle "AI 助教面板\n题目详情页内嵌\n解析 / 变式题 / 追问" as UI
+rectangle "AiController\n/api/ai/**\nSSE 流式输出" as AC
+rectangle "AiService\n取题 → 组装 Prompt\n→ 调模型 → 落库" as AS
+rectangle "PromptBuilder\n按业务类型选模板\n解析 / 变式 / 诊断 / 对话" as PB
+rectangle "KeyCipher\nAES-GCM 加解密\n密钥只存密文" as KC
+rectangle "AiClient\nOpenAI 兼容协议\nbaseUrl + model 可配" as CL
+
+database "MySQL" as DB {
+  artifact "t_ai_config\nuser_id · provider\napi_key_cipher · model" as T1
+  artifact "t_ai_record\n调用记录 · Token 用量\n成功/失败" as T2
+  artifact "t_question\nt_answer_record\n题目与答题上下文" as T3
+}
+
+cloud "外部大模型 API\n（用户自己的 Key）\nDeepSeek / 通义 / OpenAI…" as LLM
+
+U --> UI : 点击「AI 解析」
+UI --> AC : HTTPS + JSON\n（只传题目 id，不传 Key）
+AC --> AS : 已登录（Session）
+AS --> PB : 组装提示词
+AS --> KC : 读取并解密 Key
+AS --> CL : 发起调用
+CL --> LLM : HTTPS\nAuthorization: 用户 Key
+AS --> T2 : 记录调用/用量
+AS --> T3 : 读取题目、答题记录
+T1 --> KC : 密文密钥
+
+note bottom of KC
+  安全约束：
+  1) Key 只在服务端解密，永不返回前端（只回掩码 ****abcd）
+  2) 日志与异常信息脱敏，不落明文 Key
+  3) 主密钥从环境变量读取，不写进代码/仓库
+  4) 统一限流、超时、重试，避免异常消耗用户额度
+end note
+@enduml

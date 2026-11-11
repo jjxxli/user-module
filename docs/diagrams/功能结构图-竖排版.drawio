@@ -1,0 +1,860 @@
+<mxfile host="app.diagrams.net" agent="DSH" pages="2">
+  <diagram id="vertical-rot" name="竖排-旋转文字">
+    <mxGraphModel dx="2213" dy="1163" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1596" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="root" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=15;fontStyle=1;" value="统考408刷题软件" vertex="1">
+          <mxGeometry height="46" width="230" x="683" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=18;" value="用户与登录" vertex="1">
+          <mxGeometry height="40" width="120" x="63" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="er0" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m0">
+          <mxGeometry relative="1" x="0.0013" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="108" />
+              <mxPoint x="123" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="注册账户" vertex="1">
+          <mxGeometry height="200" width="32" x="44" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_0" edge="1" parent="1" source="m0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m0c0">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="123" y="215" />
+              <mxPoint x="60" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="登录 / 退出" vertex="1">
+          <mxGeometry height="200" width="32" x="86" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_1" edge="1" parent="1" source="m0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m0c1">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="123" y="215" />
+              <mxPoint x="102" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="当前登录用户" vertex="1">
+          <mxGeometry height="200" width="32" x="128" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_2" edge="1" parent="1" source="m0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m0c2">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="123" y="215" />
+              <mxPoint x="144" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="角色权限" vertex="1">
+          <mxGeometry height="200" width="32" x="170" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_3" edge="1" parent="1" source="m0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m0c3">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="123" y="215" />
+              <mxPoint x="186" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=18;" value="题库查询" vertex="1">
+          <mxGeometry height="40" width="120" x="288" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="er1" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="108" />
+              <mxPoint x="348" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="科目列表" vertex="1">
+          <mxGeometry height="200" width="32" x="248" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_0" edge="1" parent="1" source="m1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m1c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348" y="215" />
+              <mxPoint x="264" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="题目分页查询" vertex="1">
+          <mxGeometry height="200" width="32" x="290" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_1" edge="1" parent="1" source="m1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m1c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348" y="215" />
+              <mxPoint x="306" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="多条件筛选" vertex="1">
+          <mxGeometry height="200" width="32" x="332" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_2" edge="1" parent="1" source="m1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m1c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348" y="215" />
+              <mxPoint x="348" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="题目详情" vertex="1">
+          <mxGeometry height="200" width="32" x="374" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_3" edge="1" parent="1" source="m1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m1c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348" y="215" />
+              <mxPoint x="390" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="知识点分类" vertex="1">
+          <mxGeometry height="200" width="32" x="416" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_4" edge="1" parent="1" source="m1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m1c4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348" y="215" />
+              <mxPoint x="432" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=18;" value="做题与判卷" vertex="1">
+          <mxGeometry height="40" width="120" x="534" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="er2" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="108" />
+              <mxPoint x="594" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="顺序练习" vertex="1">
+          <mxGeometry height="200" width="32" x="494" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_0" edge="1" parent="1" source="m2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m2c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594" y="215" />
+              <mxPoint x="510" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="随机抽题" vertex="1">
+          <mxGeometry height="200" width="32" x="536" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_1" edge="1" parent="1" source="m2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m2c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594" y="215" />
+              <mxPoint x="552" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="真题模式" vertex="1">
+          <mxGeometry height="200" width="32" x="578" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_2" edge="1" parent="1" source="m2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m2c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594" y="215" />
+              <mxPoint x="594" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="提交答案与判分" vertex="1">
+          <mxGeometry height="200" width="32" x="620" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_3" edge="1" parent="1" source="m2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m2c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594" y="215" />
+              <mxPoint x="636" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="答案与解析展示" vertex="1">
+          <mxGeometry height="200" width="32" x="662" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_4" edge="1" parent="1" source="m2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m2c4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594" y="215" />
+              <mxPoint x="678" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=18;" value="错题本" vertex="1">
+          <mxGeometry height="40" width="120" x="738" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="er3" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="108" />
+              <mxPoint x="798" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="错题自动收录" vertex="1">
+          <mxGeometry height="200" width="32" x="740" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3_0" edge="1" parent="1" source="m3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m3c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="215" />
+              <mxPoint x="756" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="错题重做" vertex="1">
+          <mxGeometry height="200" width="32" x="782" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3_1" edge="1" parent="1" source="m3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m3c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="215" />
+              <mxPoint x="798" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="移除 / 掌握标记" vertex="1">
+          <mxGeometry height="200" width="32" x="824" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3_2" edge="1" parent="1" source="m3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m3c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="215" />
+              <mxPoint x="840" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=18;" value="学习统计" vertex="1">
+          <mxGeometry height="40" width="120" x="921" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="er4" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m4">
+          <mxGeometry relative="1" x="0.0038" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="108" />
+              <mxPoint x="981" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="刷题量统计" vertex="1">
+          <mxGeometry height="200" width="32" x="902" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_0" edge="1" parent="1" source="m4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m4c0">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="981" y="215" />
+              <mxPoint x="918" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="正确率分析" vertex="1">
+          <mxGeometry height="200" width="32" x="944" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_1" edge="1" parent="1" source="m4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m4c1">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="981" y="215" />
+              <mxPoint x="960" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="知识点掌握度" vertex="1">
+          <mxGeometry height="200" width="32" x="986" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_2" edge="1" parent="1" source="m4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m4c2">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="981" y="215" />
+              <mxPoint x="1002" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="学习趋势图" vertex="1">
+          <mxGeometry height="200" width="32" x="1028" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_3" edge="1" parent="1" source="m4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m4c3">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="981" y="215" />
+              <mxPoint x="1044" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=18;" value="管理后台" vertex="1">
+          <mxGeometry height="40" width="120" x="1125" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="er5" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m5">
+          <mxGeometry relative="1" x="0.0021" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="108" />
+              <mxPoint x="1185" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="题目增删改查" vertex="1">
+          <mxGeometry height="200" width="32" x="1106" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_0" edge="1" parent="1" source="m5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m5c0">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185" y="215" />
+              <mxPoint x="1122" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="题库批量导入" vertex="1">
+          <mxGeometry height="200" width="32" x="1148" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_1" edge="1" parent="1" source="m5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m5c1">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185" y="215" />
+              <mxPoint x="1164" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="用户管理" vertex="1">
+          <mxGeometry height="200" width="32" x="1190" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_2" edge="1" parent="1" source="m5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m5c2">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185" y="215" />
+              <mxPoint x="1206" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="数据统计 / 导出" vertex="1">
+          <mxGeometry height="200" width="32" x="1232" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_3" edge="1" parent="1" source="m5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m5c3">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185" y="215" />
+              <mxPoint x="1248" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=18;" value="AI 助教" vertex="1">
+          <mxGeometry height="40" width="120" x="1371" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="er6" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m6">
+          <mxGeometry relative="1" x="0.0014" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="108" />
+              <mxPoint x="1431" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="密钥管理" vertex="1">
+          <mxGeometry height="200" width="32" x="1310" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_0" edge="1" parent="1" source="m6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m6c0">
+          <mxGeometry relative="1" x="0.0065" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431" y="215" />
+              <mxPoint x="1326" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="AI 深度解析" vertex="1">
+          <mxGeometry height="200" width="32" x="1352" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_1" edge="1" parent="1" source="m6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m6c1">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431" y="215" />
+              <mxPoint x="1368" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="AI 变式题" vertex="1">
+          <mxGeometry height="200" width="32" x="1394" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_2" edge="1" parent="1" source="m6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m6c2">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431" y="215" />
+              <mxPoint x="1410" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="AI 学情诊断" vertex="1">
+          <mxGeometry height="200" width="32" x="1436" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_3" edge="1" parent="1" source="m6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m6c3">
+          <mxGeometry relative="1" x="0.0141" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431" y="215" />
+              <mxPoint x="1452" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="多轮追问" vertex="1">
+          <mxGeometry height="200" width="32" x="1478" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_4" edge="1" parent="1" source="m6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m6c4">
+          <mxGeometry relative="1" x="0.0088" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431" y="215" />
+              <mxPoint x="1494" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;horizontal=1;fontSize=18;spacing=2;textDirection=vertical-lr;" value="调用记录" vertex="1">
+          <mxGeometry height="200" width="32" x="1520" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_5" edge="1" parent="1" source="m6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=none;endFill=0;endSize=7;fontFamily=Microsoft YaHei;" target="m6c5">
+          <mxGeometry relative="1" x="0.0065" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431" y="215" />
+              <mxPoint x="1536" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="vertical-upright" name="竖排-正立文字">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1596" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="root" value="统考408刷题软件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="683.0" y="24" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m0" value="用户与登录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="63.0" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="er0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="root" target="m0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="108" />
+              <mxPoint x="123.0" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c0" value="注册账户" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="44" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m0" target="m0c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="123.0" y="215" />
+              <mxPoint x="60.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c1" value="登录 / 退出" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="86" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m0" target="m0c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="123.0" y="215" />
+              <mxPoint x="102.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c2" value="当前登录用户" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="128" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m0" target="m0c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="123.0" y="215" />
+              <mxPoint x="144.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0c3" value="角色权限" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="170" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec0_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m0" target="m0c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="123.0" y="215" />
+              <mxPoint x="186.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" value="题库查询" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="288.0" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="er1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="root" target="m1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="108" />
+              <mxPoint x="348.0" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c0" value="科目列表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="248" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m1" target="m1c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348.0" y="215" />
+              <mxPoint x="264.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c1" value="题目分页查询" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="290" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m1" target="m1c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348.0" y="215" />
+              <mxPoint x="306.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c2" value="多条件筛选" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="332" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m1" target="m1c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348.0" y="215" />
+              <mxPoint x="348.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c3" value="题目详情" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="374" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m1" target="m1c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348.0" y="215" />
+              <mxPoint x="390.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1c4" value="知识点分类" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="416" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m1" target="m1c4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348.0" y="215" />
+              <mxPoint x="432.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="做题与判卷" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="534.0" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="er2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="root" target="m2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="108" />
+              <mxPoint x="594.0" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c0" value="顺序练习" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="494" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m2" target="m2c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594.0" y="215" />
+              <mxPoint x="510.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c1" value="随机抽题" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="536" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m2" target="m2c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594.0" y="215" />
+              <mxPoint x="552.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c2" value="真题模式" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="578" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m2" target="m2c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594.0" y="215" />
+              <mxPoint x="594.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c3" value="提交答案与判分" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="620" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m2" target="m2c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594.0" y="215" />
+              <mxPoint x="636.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2c4" value="答案与解析展示" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="662" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m2" target="m2c4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="594.0" y="215" />
+              <mxPoint x="678.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="错题本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="738.0" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="er3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="root" target="m3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="108" />
+              <mxPoint x="798.0" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3c0" value="错题自动收录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="740" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m3" target="m3c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="215" />
+              <mxPoint x="756.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3c1" value="错题重做" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="782" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m3" target="m3c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="215" />
+              <mxPoint x="798.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3c2" value="移除 / 掌握标记" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="824" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m3" target="m3c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="215" />
+              <mxPoint x="840.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="学习统计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="921.0" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="er4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="root" target="m4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="108" />
+              <mxPoint x="981.0" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c0" value="刷题量统计" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="902" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m4" target="m4c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="981.0" y="215" />
+              <mxPoint x="918.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c1" value="正确率分析" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="944" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m4" target="m4c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="981.0" y="215" />
+              <mxPoint x="960.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c2" value="知识点掌握度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="986" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m4" target="m4c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="981.0" y="215" />
+              <mxPoint x="1002.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4c3" value="学习趋势图" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1028" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m4" target="m4c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="981.0" y="215" />
+              <mxPoint x="1044.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="管理后台" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1125.0" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="er5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="root" target="m5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="108" />
+              <mxPoint x="1185.0" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c0" value="题目增删改查" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1106" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m5" target="m5c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185.0" y="215" />
+              <mxPoint x="1122.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c1" value="题库批量导入" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1148" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m5" target="m5c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185.0" y="215" />
+              <mxPoint x="1164.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c2" value="用户管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m5" target="m5c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185.0" y="215" />
+              <mxPoint x="1206.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5c3" value="数据统计 / 导出" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1232" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m5" target="m5c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1185.0" y="215" />
+              <mxPoint x="1248.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="AI 助教" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1371.0" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="er6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="root" target="m6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798.0" y="108" />
+              <mxPoint x="1431.0" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c0" value="密钥管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m6" target="m6c0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431.0" y="215" />
+              <mxPoint x="1326.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c1" value="AI 深度解析" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1352" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m6" target="m6c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431.0" y="215" />
+              <mxPoint x="1368.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c2" value="AI 变式题" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1394" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m6" target="m6c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431.0" y="215" />
+              <mxPoint x="1410.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c3" value="AI 学情诊断" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1436" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m6" target="m6c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431.0" y="215" />
+              <mxPoint x="1452.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c4" value="多轮追问" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1478" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m6" target="m6c4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431.0" y="215" />
+              <mxPoint x="1494.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6c5" value="调用记录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Microsoft YaHei;textDirection=vertical-rl;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="240" width="32" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;endArrow=block;endFill=1;endSize=7;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="m6" target="m6c5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1431.0" y="215" />
+              <mxPoint x="1536.0" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

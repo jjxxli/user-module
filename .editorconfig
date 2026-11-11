@@ -1,0 +1,29 @@
+# ============================================================
+# EditorConfig：让不同编辑器（IDEA / VS Code / Vim ...）保持一致的编码与缩进
+# 文档：https://editorconfig.org
+# ============================================================
+root = true
+
+# 所有文件的默认约定
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+# Java：4 空格缩进（与 IDEA 默认一致）
+[*.java]
+indent_size = 4
+
+# YAML：2 空格缩进（缩进错误会直接导致 CI 解析失败）
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown：行尾空格可能是有意的换行，不自动裁剪
+[*.md]
+trim_trailing_whitespace = false
+
+# Windows 专用脚本：保持 CRLF
+[*.{ps1,cmd}]
+end_of_line = crlf

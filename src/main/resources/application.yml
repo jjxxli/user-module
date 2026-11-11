@@ -1,0 +1,48 @@
+# ============================================================
+#  公共配置（会提交到 Git 仓库）
+#  ⚠ 禁止在本文件中写入任何真实密码 / 密钥 / 私密地址。
+#  本机敏感配置请写在 application-local.yml（已在 .gitignore 中忽略），
+#  模板见 application-local.yml.example。
+# ============================================================
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 30m
+
+spring:
+  application:
+    name: user-module
+
+  # 默认激活 local 配置：有 application-local.yml 时用本机数据库，
+  # 没有时回退到下面的环境变量 / 默认值（CI 中使用 test profile，走 H2 内存库）。
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+
+  datasource:
+    # 推荐用环境变量注入：MYSQL_URL / MYSQL_USERNAME / MYSQL_PASSWORD
+    url: "${MYSQL_URL:jdbc:mysql://localhost:3306/userdb?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}"
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  sql:
+    init:
+      # 不自动建表 / 灌数据；MySQL 表结构请手动执行 src/main/sql/user_module_mysql.sql
+      mode: never
+
+  h2:
+    console:
+      # 本地默认使用 MySQL，用不到 H2 控制台；test profile 会单独覆盖
+      enabled: false
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.example.user.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    com.example.user: debug

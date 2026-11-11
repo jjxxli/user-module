@@ -1,0 +1,81 @@
+#!/bin/sh
+# ============================================================
+# commit-msg：校验提交信息符合 Conventional Commits 规范
+# 格式：<type>(<scope>): <subject>
+# 允许的 type：feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert
+# scope 可选，仅允许小写字母、数字与 . _ / -
+# subject 长度 1~72
+# 例外：Merge 开头的合并提交、Revert 开头的回滚提交直接放行
+# ============================================================
+set -u
+
+commit_msg_file="${1:-}"
+if [ -z "$commit_msg_file" ] || [ ! -f "$commit_msg_file" ]; then
+    echo "❌ commit-msg：未收到有效的提交信息文件参数。" >&2
+    exit 1
+fi
+
+# 只取标题行，并去掉 Windows 编辑器可能写入的 \r
+first_line=$(head -n 1 "$commit_msg_file" | tr -d '\r')
+
+# 合并提交 / Revert 提交放行
+case "$first_line" in
+    "Merge "*|"Revert "*)
+        exit 0
+        ;;
+esac
+
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9._/-]+\))?: .{1,72}$'
+header='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9._/-]+\))?: '
+
+if printf '%s' "$first_line" | grep -Eq "$pattern"; then
+    exit 0
+fi
+
+# 兼容中文标题：上面的正则在 C locale 下按「字节」而非「字符」计数，
+# 30 个汉字 = 90 字节会被误判为超过 72 个字符。这里按 UTF-8 字符数再判断一次。
+# 去掉所有续字节（0x80-0xBF）后剩余的字节数就是字符数，与系统 locale 无关。
+if printf '%s' "$first_line" | grep -Eq "$header"; then
+    subject=${first_line#*: }
+    subject_chars=$(printf '%s' "$subject" | LC_ALL=C tr -d '\200-\277' | LC_ALL=C wc -c | tr -d '[:space:]')
+    if [ "$subject_chars" -ge 1 ] && [ "$subject_chars" -le 72 ]; then
+        exit 0
+    fi
+fi
+
+cat >&2 <<'EOF'
+❌ 提交信息不符合 Conventional Commits 规范。
+
+正确的格式：
+  <type>(<scope>): <subject>
+  （scope 可省略）
+
+示例：
+  feat(user): 新增按 ID 查询用户接口
+  fix(service): 修复用户名重复校验失效的问题
+  docs(readme): 补充本地启动说明
+  test: 补充 UserService 单元测试
+  chore(db): 更新 init.sql 初始化脚本
+
+允许的 type：
+  feat      新功能
+  fix       缺陷修复
+  docs      文档变更
+  style     代码格式（不影响逻辑）
+  refactor  重构（非新功能、非修复）
+  perf      性能优化
+  test      测试相关
+  build     构建系统 / 依赖变更
+  ci        CI 配置变更
+  chore     杂项（非上述类别的日常维护）
+  revert    回滚提交
+
+格式要求：
+  - type 必须小写；scope 可选、小写，写在括号里；
+  - 冒号后面必须有且只有一个空格；
+  - 标题长度 1~72 个字符（中文按字符计，建议简短）。
+EOF
+
+echo "" >&2
+echo "你的提交信息标题是：$first_line" >&2
+exit 1

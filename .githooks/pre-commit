@@ -1,0 +1,78 @@
+#!/bin/sh
+# ============================================================
+# pre-commit：提交前检查
+# 安装方式：scripts/install-hooks.sh（Git Bash / Linux）
+#           scripts/install-hooks.ps1（Windows PowerShell）
+# 规则：
+#   1. 禁止在 main 分支上直接提交
+#   2. 禁止提交超过 5MB 的单个文件
+#   3. 禁止提交 .env / *.pem / *.key / id_rsa* / application-local.yml 等敏感文件
+#   4. 禁止行尾空白、行尾多余空格与残留冲突标记（git diff --cached --check）
+# ============================================================
+set -u
+
+# ---------- 1. 禁止直接在 main 分支提交 ----------
+current_branch=$(git symbolic-ref --short -q HEAD 2>/dev/null || true)
+if [ "$current_branch" = "main" ]; then
+    echo "❌ 不允许直接在 main 分支上提交。"
+    echo "   main 是受保护分支，请先切出功能分支再开发："
+    echo ""
+    echo "     git switch -c feature/your-feature    # 从 main 切出功能分支"
+    echo ""
+    echo "   分支命名约定：feature/ fix/ docs/ refactor/ chore/ hotfix/ 前缀。"
+    exit 1
+fi
+
+# ---------- 准备暂存文件列表 ----------
+# 用临时文件而不是管道，保证循环内 exit 能真正终止脚本
+tmp_list=$(mktemp 2>/dev/null || echo "${TMPDIR:-/tmp}/pre-commit-files.$$")
+trap 'rm -f "$tmp_list"' EXIT INT TERM
+git diff --cached --name-only --diff-filter=ACMR >"$tmp_list" 2>/dev/null || true
+
+# ---------- 2 & 3. 大文件 / 敏感文件检查 ----------
+MAX_SIZE=$((5 * 1024 * 1024))   # 5MB = 5,242,880 字节
+
+while IFS= read -r file; do
+    [ -n "$file" ] || continue
+
+    # 工作区已不存在的文件（如被删除）不检查
+    if [ ! -e "$file" ] && [ ! -L "$file" ]; then
+        continue
+    fi
+
+    # 大文件：按暂存区 blob 大小判断，避免工作区/暂存区不一致
+    size=$(git cat-file -s ":$file" 2>/dev/null || echo 0)
+    case "$size" in
+        ''|*[!0-9]*) size=0 ;;
+    esac
+    if [ "$size" -gt "$MAX_SIZE" ]; then
+        size_mb=$((size / 1024 / 1024))
+        echo "❌ 文件过大（约 ${size_mb}MB，超过 5MB 上限）：$file"
+        echo "   请勿提交构建产物、数据集、压缩包等大文件（target/ 已在 .gitignore 中忽略）。"
+        exit 1
+    fi
+
+    # 敏感文件：按文件名匹配
+    base=$(basename "$file")
+    case "$base" in
+        *.env|.env*|*.pem|*.key|id_rsa*|application-local.yml)
+            echo "❌ 检测到敏感的本地配置 / 密钥文件：$file"
+            echo "   请勿提交 .env、*.env、*.pem、*.key、id_rsa*、application-local.yml 等文件。"
+            echo "   本地配置请放在 application-local.yml（已被 .gitignore 忽略），"
+            echo "   或通过环境变量注入敏感信息。"
+            exit 1
+            ;;
+    esac
+done <"$tmp_list"
+
+# ---------- 4. 行尾空白 / 冲突标记检查 ----------
+if ! diff_check_output=$(git diff --cached --check); then
+    echo "❌ git diff --cached --check 检测到问题（行尾空白、行尾多余空格或残留冲突标记）："
+    echo ""
+    echo "$diff_check_output"
+    echo ""
+    echo "   请清理上述内容后重新提交。"
+    exit 1
+fi
+
+exit 0

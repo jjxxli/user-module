@@ -1,0 +1,34 @@
+# ============================================================
+# Git 换行符与文本/二进制处理规则
+# 说明：仓库内统一使用 LF；Windows 专用脚本（*.cmd / *.ps1）检出时保持 CRLF。
+# ============================================================
+
+# 默认：自动识别文本文件，仓库内统一 LF 换行
+* text=auto eol=lf
+
+# ---------- 源码与文本文件 ----------
+*.java    text
+*.xml     text
+*.yml     text
+*.md      text
+*.sql     text
+*.drawio  text
+*.svg     text
+
+# ---------- Git 钩子与 shell 脚本：必须 LF ----------
+# 否则在 Git Bash / Linux / CI 下会出现 "bad interpreter" 或莫名的语法错误
+.githooks/* text eol=lf
+*.sh        text eol=lf
+mvnw        text eol=lf
+
+# ---------- Windows 专用脚本：保持 CRLF ----------
+# cmd.exe 与 Windows PowerShell 更习惯 CRLF
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# ---------- 二进制文件：不做换行转换、不做文本 diff ----------
+*.png  binary
+*.jpg  binary
+*.docx binary
+*.jar  binary
+*.zip  binary

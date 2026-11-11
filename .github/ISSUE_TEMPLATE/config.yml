@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 新成员接入指南
+    url: https://github.com/jjxxli/user-module/blob/main/docs/新成员接入指南.md
+    about: 第一次参与项目？先按这份指南配置环境、装 Git 钩子、学会提 PR。
+  - name: 📐 协作规范 / 提交规范
+    url: https://github.com/jjxxli/user-module/blob/main/docs/协作规范.md
+    about: 分支命名、提交信息格式、代码评审规则都在这里。
+  - name: 💬 使用问题（不一定是 Bug）
+    url: https://github.com/jjxxli/user-module/discussions
+    about: 环境配置、协作流程、怎么改代码之类的疑问。

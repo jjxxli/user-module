@@ -1,0 +1,52 @@
+name: 📋 开发任务
+description: 拆分到人的具体开发任务（建议一个任务对应一个 PR）
+title: "[task] "
+labels: ["task"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 任务目标
+      description: 完成后系统具备什么能力？
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 改动范围（文件 / 接口 / 表）
+      placeholder: |
+        - src/main/java/com/example/user/service/UserService.java
+        - POST /api/auth/login
+        - t_user 表新增 last_login_time 字段
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 实施步骤
+      placeholder: |
+        1. 新增 DTO 与参数校验
+        2. 写 Service 逻辑
+        3. 补单元测试
+    validations: { required: false }
+  - type: textarea
+    id: dod
+    attributes:
+      label: 完成标准（DoD）
+      value: |
+        - [ ] 功能可用，接口自测通过
+        - [ ] 本地 ./mvnw -B -ntp verify 通过
+        - [ ] PR 已按模板填写并至少 1 人 Approve
+        - [ ] 相关文档 / api-test.http 已更新
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: 负责人（GitHub 用户名）
+      placeholder: 例如 xiaoming
+  - type: input
+    id: branch
+    attributes:
+      label: 分支名
+      placeholder: 例如 feature/login-jwt

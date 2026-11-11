@@ -1,0 +1,51 @@
+@startuml
+skinparam defaultFontName "Microsoft YaHei"
+skinparam shadowing false
+skinparam padding 2
+skinparam nodesep 26
+skinparam ranksep 34
+skinparam ArrowColor #2F6FB8
+skinparam ArrowFontColor #55637A
+skinparam ArrowFontSize 11
+skinparam rectangle {
+  BackgroundColor #F7FAFF
+  BorderColor #2F6FB8
+  FontColor #1F3B73
+  FontSize 12
+}
+skinparam database {
+  BackgroundColor #FFF7E6
+  BorderColor #C98A1B
+  FontColor #7A5210
+  FontSize 12
+}
+
+title 408刷题软件 · 用户模块 技术架构图
+
+actor "学生 / 管理员" as U
+
+rectangle "浏览器页面\nregister / login / users" as WEB
+rectangle "LoginInterceptor\n登录拦截（第 9 步）" as IC
+rectangle "Controller 接口层\nAuthController" as C
+rectangle "Service 业务层\nUserService" as S
+rectangle "Mapper 接口层\nUserMapper" as M
+rectangle "MyBatis 映射\nUserMapper.xml" as X
+database "MySQL 8\nuserdb . t_user" as DB
+
+U --> WEB : 填写表单
+WEB --> IC : HTTP / JSON
+IC --> C : 已登录放行
+IC ..> WEB : 未登录返回 401
+C --> S : 调用业务方法
+S --> M : 调用数据方法
+M --> X : 绑定 SQL
+X --> DB : JDBC
+
+rectangle "common 公共层\nResult · BizException\nGlobalExceptionHandler" as CM
+rectangle "config 配置层\nPasswordConfig\nWebConfig" as CFG
+
+CM .up.> C : 统一返回 / 异常
+CM .up.> S : 业务异常
+CFG .right.> S : BCrypt 加密
+CFG .right.> IC : 拦截路径
+@enduml

@@ -1,0 +1,11 @@
+# ============================================================
+#  本机开发配置模板
+#  使用方式：复制本文件为 application-local.yml（同目录），
+#  然后把 username / password 改成自己电脑上的 MySQL 账号密码。
+#  application-local.yml 已被 .gitignore 忽略，不会被提交。
+# ============================================================
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdb?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 改成你自己的MySQL密码
