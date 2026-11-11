@@ -1,8 +1,12 @@
-# Dependabot：每周检查 Maven 依赖与 GitHub Actions 的更新并自动提 PR
-# 文档：https://docs.github.com/code-security/dependabot/dependabot-version-updates
+# ============================================================
+#  Dependabot：每周自动检查依赖更新并发起 PR（走正常 PR 流程 + CI 门禁）
+#  文档：https://docs.github.com/code-security/dependabot/dependabot-version-updates
+#  约定：只接受次版本 / 补丁更新；大版本（Spring Boot 4、MyBatis 4 …）需要人工评估，
+#        避免自动 PR 把项目改坏。如确需升级大版本，请先开 Issue 讨论。
+# ============================================================
 version: 2
 updates:
-  # Maven 依赖（pom.xml 在仓库根目录）
+  # ---------- Maven 依赖（pom.xml 在仓库根目录） ----------
   - package-ecosystem: maven
     directory: "/"
     schedule:
@@ -12,8 +16,20 @@ updates:
       - dependencies
     commit-message:
       prefix: "build(deps)"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
+    groups:
+      # 次版本 + 补丁合并成一个 PR，减少审查负担
+      maven-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
 
-  # GitHub Actions 版本（.github/workflows 里的 action）
+  # ---------- GitHub Actions 版本（.github/workflows 里的 action） ----------
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
@@ -21,5 +37,14 @@ updates:
     open-pull-requests-limit: 5
     labels:
       - dependencies
+      - ci
     commit-message:
       prefix: "ci(deps)"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
+    groups:
+      github-actions:
+        patterns:
+          - "*"
